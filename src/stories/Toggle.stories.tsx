@@ -2,7 +2,7 @@ import React from 'react';
 import Toggle from "../components/NeuUI/Toggle/Toggle";
 
 export default {
-  title: 'Welcome',
+  title: 'Toggle',
   component: Toggle,
 };
 

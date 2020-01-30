@@ -4,8 +4,10 @@ module.exports = ({ config }) => {
         use: [
             {
                 loader: require.resolve('awesome-typescript-loader'),
+
             },
         ],
+        enforce: 'pre',
     });
     config.resolve.extensions.push('.ts', '.tsx');
     return config;

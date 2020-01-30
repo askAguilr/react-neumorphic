@@ -17,10 +17,17 @@ const theme1 = createTheme({
     }
 });
 
+const theme2 = createTheme({
+    primaryColor: '#000099',
+    linearProgressBar:{
+        color:"primary"
+    }
+});
+
 export const ToStorybook = () => {
     return (
-        <ThemeProvider theme={theme1}>
-            <Box>
+        <ThemeProvider theme={[theme1,theme2][Math.round(Math.random())]}>
+            <Box style={{maxWidth:300, height:500, marginLeft:'auto',marginRight:'auto'}}>
                 <Button >
                     Themed button
                 </Button>

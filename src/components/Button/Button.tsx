@@ -3,7 +3,7 @@ import {ThemeContext, Theme, determineColor} from '../Theme';
 import "./Button.css";
 
 export default (props:any) => {
-    const {style,children,type} = props;
+    const {style,children} = props;
     const {button,baselineColor,primaryColor,secondaryColor} = useContext<Theme>(ThemeContext);
     const palette = {
         primary:primaryColor,

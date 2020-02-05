@@ -1,5 +1,5 @@
 import * as React from 'react';
-import  Button  from '../components/NeuUI/Button/Button';
+import  {Button}  from '../';
 import { withKnobs, text, boolean, number } from "@storybook/addon-knobs";
 
 export default {

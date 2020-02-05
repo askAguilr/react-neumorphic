@@ -42,7 +42,7 @@ function Select(props:any) {
 }
 
 Select.defaultProps = {
-
+    options:[],
 }
 
 export default Select;

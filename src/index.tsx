@@ -1,11 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import Button from "./components/Button/Button"
+import Box from "./components/Box/Box";
+import Circle from "./components/Circle/Circle";
+import {Layout,Header,Content,Footer} from "./components/Layout/Layout";
+import {createTheme,ThemeProvider,determineColor} from "./components/Theme";
+import LinearProgressBar from "./components/LinearProgressBar/LinearProgressBar";
+import RoundProgressBar from "./components/RoundProgressBar/RoundProgressBar";
+import Select from "./components/Select/Select";
+import Toggle from "./components/Toggle/Toggle";
 
-ReactDOM.render(<App />, document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+export {
+    Button,
+    Box,
+    Circle,
+    Layout,
+    Header,
+    Content,
+    Footer,
+    createTheme,
+    ThemeProvider,
+    determineColor,
+    LinearProgressBar,
+    RoundProgressBar,
+    Select,
+    Toggle
+};

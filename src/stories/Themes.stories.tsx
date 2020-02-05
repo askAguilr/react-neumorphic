@@ -1,10 +1,14 @@
 import React from 'react';
-import Toggle from "../components/NeuUI/Toggle/Toggle";
-import {ThemeProvider} from "../components/NeuUI/Theme/ThemeProvider";
-import {createTheme} from "../components/NeuUI/Theme/ThemeFactory";
-import Box from "../components/NeuUI/Box/Box";
-import Button from "../components/NeuUI/Button/Button";
-import LinearProgressBar from "../components/NeuUI/LinearProgressBar/LinearProgressBar";
+import Toggle from "../components/Toggle/Toggle";
+import {ThemeProvider} from "../components/Theme/ThemeProvider";
+import {createTheme} from "../components/Theme/ThemeFactory";
+import Box from "../components/Box/Box";
+import Button from "../components/Button/Button";
+import LinearProgressBar from "../components/LinearProgressBar/LinearProgressBar";
+import RoundProgressBar from "../components/RoundProgressBar/RoundProgressBar";
+import Select from "../components/Select/Select";
+import Circle from "../components/Circle/Circle";
+import {Layout} from "../components/Layout/Layout";
 
 export default {
     title: 'Themes',
@@ -26,16 +30,22 @@ const theme2 = createTheme({
 
 export const ToStorybook = () => {
     return (
-        <ThemeProvider theme={[theme1,theme2][Math.round(Math.random())]}>
-            <Box style={{maxWidth:300, height:500, marginLeft:'auto',marginRight:'auto'}}>
-                <Button >
-                    Themed button
-                </Button>
-                <Toggle/>
-                <LinearProgressBar value={75}/>
-            </Box>
+        <ThemeProvider theme={[theme1, theme2][Math.round(Math.random())]}>
+            <Layout>
+                <Box style={{maxWidth: 300, height: 500, marginLeft: 'auto', marginRight: 'auto'}}>
+                    <Button>
+                        Themed button
+                    </Button>
+                    <Toggle/>
+                    <LinearProgressBar value={75}/>
+                    <RoundProgressBar value={75}/>
+                    <Select/>
+                    <Circle/>
+                </Box>
+            </Layout>
         </ThemeProvider>
-    );};
+    );
+};
 
 ToStorybook.story = {
     name: 'Default',

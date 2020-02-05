@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import Button from "./components/NeuUI/Button/Button";
+import Button from "./components/Button/Button";
 import {FiLogIn} from "react-icons/all";
-import Toggle from "./components/NeuUI/Toggle/Toggle";
-import Progress from "./components/NeuUI/RoundProgressBar/RoundProgressBar";
-import Select from "./components/NeuUI/Select/Select";
-import LinearProgressBar from "./components/NeuUI/LinearProgressBar/LinearProgressBar";
-import Circle from "./components/NeuUI/Circle/Circle";
-import NuBox from "./components/NeuUI/Box/Box";
+import Toggle from "./components/Toggle/Toggle";
+import Progress from "./components/RoundProgressBar/RoundProgressBar";
+import Select from "./components/Select/Select";
+import LinearProgressBar from "./components/LinearProgressBar/LinearProgressBar";
+import Circle from "./components/Circle/Circle";
+import NuBox from "./components/Box/Box";
 
 class App extends Component {
   render() {

@@ -4,7 +4,7 @@ const defaultTheme:Theme = {
     baselineColor: 'orange',
     primaryColor:'red',
     secondaryColor:'blue',
-    shadowColor:'#343434',
+    shadowColor:'rgba(163,177,198,0.6)',
     backgroundColor:'#ebebf0',
     button:{
         color: 'primary'

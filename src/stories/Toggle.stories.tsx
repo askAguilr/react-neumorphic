@@ -1,5 +1,5 @@
 import React from 'react';
-import Toggle from "../components/NeuUI/Toggle/Toggle";
+import Toggle from "../components/Toggle/Toggle";
 
 export default {
   title: 'Toggle',

@@ -7,6 +7,7 @@ import LinearProgressBar from "./components/LinearProgressBar/LinearProgressBar"
 import RoundProgressBar from "./components/RoundProgressBar/RoundProgressBar";
 import Select from "./components/Select/Select";
 import Toggle from "./components/Toggle/Toggle";
+import "./index.css";
 
 export {
     Button,

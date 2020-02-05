@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './index.css';
 import Button from "./components/Button/Button";
 import {FiLogIn} from "react-icons/all";
 import Toggle from "./components/Toggle/Toggle";

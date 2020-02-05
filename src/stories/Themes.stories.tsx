@@ -39,7 +39,7 @@ export const ToStorybook = () => {
                     <Toggle/>
                     <LinearProgressBar value={75}/>
                     <RoundProgressBar value={75}/>
-                    <Select/>
+                    <Select options={["React","Angular","Vue","Vanilla"]}/>
                     <Circle/>
                 </Box>
             </Layout>

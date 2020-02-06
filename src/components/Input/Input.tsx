@@ -13,7 +13,6 @@ function Input(props:any) {
     const color = determineColor([props.color, input.color, 'baseline'], palette);
 
     const handleChange = (evt: any) => {
-        console.log(typeof evt)
         if(onChange) {
             onChange(evt.target.value);
         }
@@ -21,7 +20,7 @@ function Input(props:any) {
 
     return (
         <div className="neu-input">
-            <input style={{...style, color: color}} type={type} value={value} onChange={handleChange}/>
+            <input {...props} style={{...style, color: color}} type={type} value={value} onChange={handleChange}/>
         </div>
     );
 }

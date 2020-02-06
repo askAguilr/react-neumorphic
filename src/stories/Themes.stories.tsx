@@ -37,13 +37,14 @@ export const ToStorybook = () => {
                         Themed button
                     </Button>
                     <Toggle onChange={() => setChecked(!checked)} value={checked}/>
-                    <LinearProgressBar value={75}/>
-                    <RoundProgressBar value={75}>
+                    <LinearProgressBar value={Math.round(Math.random()*100)}/>
+                    <RoundProgressBar value={Math.round(Math.random()*100)}>
                         <Circle radius={90}/>
                     </RoundProgressBar>
                     <Select options={["React", "Angular", "Vue", "Vanilla"]} value={selection}
                             onChange={(e: string) => {
-                                setSelection(e)
+                                setSelection(e);
+
                             }}/>
                     <Input value={text} onChange={(e: string) => {
                         setText(e)

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Toggle from "../components/Toggle/Toggle";
 import {ThemeProvider} from "../components/Theme/ThemeProvider";
 import {createTheme} from "../components/Theme/ThemeFactory";
@@ -29,17 +29,22 @@ const theme2 = createTheme({
 });
 
 export const ToStorybook = () => {
+    const [checked, setChecked] = useState(false);
+    const [selection, setSelection] = useState('React');
+
     return (
         <ThemeProvider theme={[theme1, theme2][Math.round(Math.random())]}>
             <Layout>
                 <Box style={{maxWidth: 300, height: 500, marginLeft: 'auto', marginRight: 'auto'}}>
-                    <Button>
+                    <Button onClick={() => {
+                        console.log("clicked");
+                    }}>
                         Themed button
                     </Button>
-                    <Toggle/>
+                    <Toggle onChange={()=>setChecked(!checked)} value={checked}/>
                     <LinearProgressBar value={75}/>
                     <RoundProgressBar value={75}/>
-                    <Select options={["React","Angular","Vue","Vanilla"]}/>
+                    <Select options={["React", "Angular", "Vue", "Vanilla"]} value={selection} onChange={(e:string)=>{setSelection(e)}} />
                     <Circle/>
                 </Box>
             </Layout>

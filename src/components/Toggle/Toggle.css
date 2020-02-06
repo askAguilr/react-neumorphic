@@ -4,14 +4,7 @@
 }
 
 .neu-toggle-input{
-    height: 0;
-    width: 0;
-    visibility: hidden;
-    position: relative;
-    background: inherit;
-    outline: none;
-    border: none;
-    cursor: pointer;
+    display:none;
 }
 
 .neu-toggle-label {
@@ -42,11 +35,6 @@
 
 .neu-toggle-label:active:after{
     box-shadow: inset -4px -3px 10px rgba(0, 0, 0, 0.16), 2px 2px 4px rgba(0, 0, 0, 0.35);
-}
-
-
-.neu-toggle-input:checked + label {
-    background: #1890ff;
 }
 
 .neu-toggle-input:checked + label:after {

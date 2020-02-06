@@ -18,7 +18,7 @@ const theme1 = createTheme({
 export const ToStorybook = () => {
     return (
         <ThemeProvider theme={theme1}>
-            <Layout style={{height:'100vh'}}>
+            <Layout>
                 <Header>
                     <Box>Header</Box>
                 </Header>
@@ -28,9 +28,6 @@ export const ToStorybook = () => {
                 <Footer>
                     Footer
                 </Footer>
-                <Content>
-                    <p>Content</p>
-                </Content>
             </Layout>
         </ThemeProvider>
     );

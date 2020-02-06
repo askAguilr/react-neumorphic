@@ -10,13 +10,13 @@ const defaultTheme:Theme = {
         color: 'primary'
     },
     toggle:{
-        color:'red'
+        color:'primary'
     },
     linearProgressBar:{
         color:'primary'
     },
     roundProgressBar:{
-        color:'red'
+        color:'primary'
     }
 }
 

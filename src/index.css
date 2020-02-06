@@ -6,4 +6,24 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #e8e9f0 !important;
+  height: 100vh;
+  overflow: hidden;
+}
+#root{
+  height: 100%;
+  overflow: hidden;
+}
+.neu-layout{
+  display:flex;
+  flex-direction: column;
+}
+
+.neu-content{
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.neu-header{
+  flex-shink: 0;
+  overflow-y: auto;
 }

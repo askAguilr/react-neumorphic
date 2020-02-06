@@ -11,7 +11,7 @@ function LinearProgressBar(props:any) {
         secondary:secondaryColor,
         baseline:baselineColor
     }
-    const color = determineColor([props.color,linearProgressBar.color,'baseline'],palette);
+    const color = determineColor([props.color, linearProgressBar.color, 'primary'], palette);
 
     return(
         <div className="neu-linear-progress-bar">

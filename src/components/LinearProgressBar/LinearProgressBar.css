@@ -1,4 +1,5 @@
 .neu-linear-progress-bar{
+    margin: 20px 10px !important;
     width:200px;
     margin: 10px;
     display:flex;

@@ -7,6 +7,7 @@ import LinearProgressBar from "./components/LinearProgressBar/LinearProgressBar"
 import RoundProgressBar from "./components/RoundProgressBar/RoundProgressBar";
 import Select from "./components/Select/Select";
 import Toggle from "./components/Toggle/Toggle";
+import Input from "./components/Input/Input";
 import "./index.css";
 
 export {
@@ -17,6 +18,7 @@ export {
     Header,
     Content,
     Footer,
+    Input,
     createTheme,
     ThemeProvider,
     determineColor,

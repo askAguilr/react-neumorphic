@@ -1,10 +1,18 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {useState} from 'react';
 import "./Select.css";
+import {determineColor, Theme, ThemeContext} from "../Theme";
 
 function Select(props:any) {
     const {value,options,onChange,id} = props;
     const [active,setActive] = useState(false);
+    const {select,baselineColor,primaryColor,secondaryColor} = useContext<Theme>(ThemeContext);
+    const palette = {
+        primary:primaryColor,
+        secondary:secondaryColor,
+        baseline:baselineColor
+    }
+    const color = determineColor([props.color, select.color, 'baseline'], palette);
 
     const handleClick = (e:any) => {
         setActive(false);
@@ -15,7 +23,7 @@ function Select(props:any) {
     }
 
     return (
-        <div
+        <div style={{color:color}}
             className={'neu-select' + (active ? ' neu-select-active' : ' neu-select-inactive') + (typeof value !== 'undefined' && value.length ? ' selected' : '')}>
             <div className=' neu-select-value' onClick={() => setActive(!active)}>
                 <p>{value}</p>

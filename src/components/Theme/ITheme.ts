@@ -16,4 +16,10 @@ export interface Theme {
     roundProgressBar:{
         color:string
     }
+    input:{
+        color:string
+    }
+    select:{
+        color:string
+    }
 }

@@ -1,5 +1,5 @@
 .neu-roundprogressbar{
-    margin:10px;
+    margin: 20px 10px !important;
     display:flex;
     flex-direction: column;
     align-items:center;

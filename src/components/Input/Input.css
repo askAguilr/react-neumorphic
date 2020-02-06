@@ -1,0 +1,25 @@
+.neu-input {
+    margin: 20px 10px !important;
+    overflow: hidden;
+    min-height: 35px;
+    max-height: 35px;
+    transition: 0.2s;
+    border-radius: 100px;
+    position: relative;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.1),  inset -5px -5px 5px rgba(255, 255, 255, 0.3);
+}
+
+.neu-input input{
+    margin: 10px 0px 10px 15px !important;
+    width:auto;
+    all:unset;
+    -webkit-appearance: none;
+    display:block;
+    font-weight: 500;
+    font-size:14px;
+    font:inherit;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue';
+    font-weight: 500;
+    font-size: 14px;
+}

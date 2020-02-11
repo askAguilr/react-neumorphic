@@ -2,7 +2,15 @@ import React, {useContext} from 'react';
 import {ThemeContext, Theme, determineColor} from '../Theme';
 import "./Button.css";
 
-export default (props: any) => {
+export interface ButtonProps {
+    style?: any,
+    children: any,
+    onClick?: (arg0: any) => any,
+    color?: string
+}
+
+
+export default (props: ButtonProps) => {
     const {style, children, onClick} = props;
     const {button, baselineColor, primaryColor, secondaryColor, shadowColor} = useContext<Theme>(ThemeContext);
     const palette = {

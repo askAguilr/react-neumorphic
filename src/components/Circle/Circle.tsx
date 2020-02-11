@@ -1,7 +1,13 @@
 import React, {useContext} from 'react';
 import {Theme, ThemeContext} from "../Theme";
 
-const Circle = (props: any) => {
+export interface CircleProps {
+    style?: any,
+    children?: any,
+    radius?: Number,
+}
+
+const Circle = (props: CircleProps) => {
     const {style, children, radius} = props;
     const {shadowColor} = useContext<Theme>(ThemeContext);
     return (

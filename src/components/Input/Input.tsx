@@ -2,7 +2,15 @@ import React, {useContext} from 'react';
 import "./Input.css";
 import {determineColor, Theme, ThemeContext} from "../Theme";
 
-function Input(props: any) {
+export interface InputProps {
+    value: string,
+    type?: string,
+    onChange?: (arg0: any) => void,
+    style?: string,
+    color?: string
+}
+
+function Input(props: InputProps) {
     const {value, type, onChange, style} = props;
     const {input, baselineColor, primaryColor, secondaryColor, shadowColor} = useContext<Theme>(ThemeContext);
     const palette = {
@@ -18,10 +26,15 @@ function Input(props: any) {
         }
     };
 
+
     return (
         <div className="neu-input"
              style={{boxShadow: "inset 5px 5px 5px " + shadowColor + ",  inset -5px -5px 5px rgba(255, 255, 255, 0.3)"}}>
-            <input {...props} style={{...style, color: color}} type={type} value={value} onChange={handleChange}/>
+            <input {...props} style={{
+                //@ts-ignore
+                ...style, color: color
+            }
+            } type={type} value={value} onChange={handleChange}/>
         </div>
     );
 }

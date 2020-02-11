@@ -1,4 +1,4 @@
-import React, { createContext } from 'react'
+import React, {createContext} from 'react'
 import {Theme} from "./ITheme";
 import {createTheme} from "./ThemeFactory";
 
@@ -9,7 +9,7 @@ interface ThemeProps {
 
 export const ThemeContext = createContext<Theme>(createTheme())
 
-export const ThemeProvider: React.FC<ThemeProps> = (props:ThemeProps) => {
+export const ThemeProvider: React.FC<ThemeProps> = (props: ThemeProps) => {
     const {theme} = props;
 
     return (

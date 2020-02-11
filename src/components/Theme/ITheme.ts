@@ -4,22 +4,22 @@ export interface Theme {
     secondaryColor: string
     shadowColor: string
     backgroundColor: string
-    button:{
-        color:string
+    button: {
+        color: string
     }
-    toggle:{
-        color:string
+    toggle: {
+        color: string
     }
-    linearProgressBar:{
-        color:string
+    linearProgressBar: {
+        color: string
     }
-    roundProgressBar:{
-        color:string
+    roundProgressBar: {
+        color: string
     }
-    input:{
-        color:string
+    input: {
+        color: string
     }
-    select:{
-        color:string
+    select: {
+        color: string
     }
 }

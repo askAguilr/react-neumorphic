@@ -1,9 +1,16 @@
-import React, {useContext} from 'react';
+import React, {ChangeEvent, FunctionComponent, useContext} from 'react';
 import "./Toggle.css";
 import {determineColor, Theme, ThemeContext} from "../Theme";
 
-const Toggle = (props: any) => {
-    const {style, children, onChange, value} = props;
+export interface ToggleProps{
+    style?:string
+    onChange?:(event:ChangeEvent<HTMLInputElement>)=>void | void
+    value?:boolean
+    color?:string
+}
+
+const Toggle:FunctionComponent<ToggleProps> = (props) => {
+    const {style, children, onChange, value=true} = props;
     const {toggle, baselineColor, primaryColor, secondaryColor, shadowColor} = useContext<Theme>(ThemeContext);
     const palette = {
         primary: primaryColor,
@@ -12,14 +19,16 @@ const Toggle = (props: any) => {
     };
     const color = determineColor([props.color, toggle.color, 'primary'], palette);
 
+
     return (
         <div className="neu-toggle">
-            <input {...props} type="checkbox" id="switch" className="neu-toggle-input"
+            <input {...props as any} type="checkbox" id="switch" className="neu-toggle-input"
                    checked={!value}
 
                    onChange={onChange}
                    style={
                        {
+                           //@ts-ignore
                            ...style,
                        }
                    }
@@ -31,10 +40,5 @@ const Toggle = (props: any) => {
         </div>
     );
 };
-
-
-Toggle.defaultProps = {
-    value: true,
-}
 
 export default Toggle;

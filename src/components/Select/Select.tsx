@@ -1,10 +1,17 @@
-import React, {useContext} from 'react';
+import React, {FunctionComponent, useContext} from 'react';
 import {useState} from 'react';
 import "./Select.css";
 import {determineColor, Theme, ThemeContext} from "../Theme";
 
-function Select(props: any) {
-    const {value, options, onChange, id} = props;
+export interface SelectProps {
+    value: string
+    options: Array<string>
+    onChange: (arg0: any) => void
+    id?: string
+    color?: string
+}
+
+const Select: FunctionComponent<SelectProps> = ({value, options = [], onChange, id, color}) => {
     const [active, setActive] = useState(false);
     const {select, baselineColor, primaryColor, secondaryColor, shadowColor} = useContext<Theme>(ThemeContext);
     const palette = {
@@ -12,7 +19,7 @@ function Select(props: any) {
         secondary: secondaryColor,
         baseline: baselineColor
     }
-    const color = determineColor([props.color, select.color, 'baseline'], palette);
+    const calculatedColor = determineColor([color, select.color, 'baseline'], palette);
 
     const handleClick = (e: any) => {
         setActive(false);
@@ -26,7 +33,7 @@ function Select(props: any) {
         <div
             className={'neu-select' + (active ? ' neu-select-active' : ' neu-select-inactive') + (typeof value !== 'undefined' && value.length ? ' selected' : '')}
             style={{
-                color: color,
+                color: calculatedColor,
                 boxShadow: "inset 0 0 15px rgba(80, 80, 80, 0), inset 0 0 20px rgba(255, 255, 255, 0), 7px 7px 15px " + shadowColor + ", -7px -7px 20px rgba(255, 255, 255, .7), inset 0px 0px 4px rgba(255, 255, 255, .2)"
             }}
         >
@@ -54,8 +61,5 @@ function Select(props: any) {
     );
 }
 
-    Select.defaultProps = {
-        options: [],
-    }
 
-    export default Select;
+export default Select;

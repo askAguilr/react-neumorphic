@@ -7,7 +7,7 @@ export interface BoxProps {
     radius?: Number,
 }
 
-export default (props: BoxProps):any => {
+export default (props: BoxProps): any => {
     const {style, children, radius} = props;
     const {shadowColor, backgroundColor} = useContext<Theme>(ThemeContext);
 

@@ -15,12 +15,6 @@ const theme1 = createTheme({
     }
 });
 
-const theme2 = createTheme({
-    primaryColor: '#000099',
-    linearProgressBar: {
-        color: "primary"
-    }
-});
 
 export const ToStorybook = () => {
     const [checked, setChecked] = useState(false);
@@ -37,8 +31,8 @@ export const ToStorybook = () => {
                         Themed button
                     </Button>
                     <Toggle onChange={() => setChecked(!checked)} value={checked}/>
-                    <LinearProgressBar value={Math.round(Math.random()*100)}/>
-                    <RoundProgressBar value={Math.round(Math.random()*100)}>
+                    <LinearProgressBar value={Math.round(Math.random() * 100)}/>
+                    <RoundProgressBar value={Math.round(Math.random() * 100)}>
                         <Circle radius={90}/>
                     </RoundProgressBar>
                     <Select options={["React", "Angular", "Vue", "Vanilla"]} value={selection}

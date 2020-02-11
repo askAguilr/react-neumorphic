@@ -5,7 +5,6 @@ export default (props:any) => {
     const {style,children,radius} = props;
     const {shadowColor, backgroundColor} = useContext<Theme>(ThemeContext);
 
-    //TODO: apply shadow color, convert to rgba
     return(
         <div
             style={{

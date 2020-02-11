@@ -47,7 +47,7 @@
     margin: auto;
     -webkit-transition: opacity .2s, padding .2s, max-height .2s;
     transition: opacity .2s, padding .2s, max-height .2s;
-    overflow: scroll;
+    overflow: auto;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
     z-index: 999;
 }

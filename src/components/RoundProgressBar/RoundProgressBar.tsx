@@ -5,7 +5,7 @@ import {determineColor, Theme, ThemeContext} from "../Theme";
 function RoundProgressBar(props:any) {
     const {children,size,strokeWidth} = props;
     const radius = (size - strokeWidth) / 2;
-    const {roundProgressBar,baselineColor,primaryColor,secondaryColor} = useContext<Theme>(ThemeContext);
+    const {roundProgressBar,baselineColor,primaryColor,secondaryColor,shadowColor} = useContext<Theme>(ThemeContext);
     const palette = {
         primary:primaryColor,
         secondary:secondaryColor,
@@ -17,7 +17,8 @@ function RoundProgressBar(props:any) {
     const dashOffset = dashArray - dashArray * props.value / props.max;
 
     return (
-        <div className="neu-roundprogressbar">
+        <div className="neu-roundprogressbar" style={{boxShadow: "inset 0 0 7px rgba(255, 255, 255, 0.3), inset 5px 5px 5px rgba(0, 0, 0, 0.1), 3px 3px 7px " + shadowColor + " , -3px -3px 10px rgba(255, 255, 255, 0.95), inset -5px -5px 5px rgba(255, 255, 255, 0.3)",
+        }}>
             <svg
                 width = {size}
                 height = {size}

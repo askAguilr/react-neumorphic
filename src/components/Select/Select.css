@@ -1,4 +1,4 @@
-.neu-select {
+.root {
     font-size: 14px;
     font-weight: 500;
     position: relative;
@@ -18,7 +18,7 @@
     box-shadow: inset 0 0 15px rgba(80, 80, 80, 0), inset 0 0 20px rgba(255, 255, 255, 0), 7px 7px 15px rgba(80, 84, 80, .15), -7px -7px 20px rgba(255, 255, 255, .7), inset 0px 0px 4px rgba(255, 255, 255, .2);
 }
 
-.neu-select svg {
+.svg {
     pointer-events: none;
     position: absolute;
     fill: #6d7ba5;
@@ -26,19 +26,19 @@
     top: 15px;
 }
 
-.neu-select-value {
+.value {
     background-color: inherit;
     font-weight: 500;
     padding: 8px 20px;
     opacity: .8;
 }
 
-.neu-select-value p {
+.value p {
     margin: 0px;
     min-height: 20px;
 }
 
-.neu-select-options {
+.options {
     background: #e8e9f0;
     border-radius: 20px;
     position: absolute;
@@ -52,17 +52,17 @@
     z-index: 999;
 }
 
-.neu-select-options .neu-select-option {
+.options .option {
     padding: 13px;
     -webkit-transition: all .2s;
     transition: all .2s;
 }
 
-.neu-select-options .neu-select-option:hover, .neu-select-options .neu-select-option-active {
+.options .option:hover, .options .active {
     background: rgba(0, 0, 0, 0.1);
 }
 
-.neu-select-active .neu-select-trigger {
+.active .trigger {
     position: fixed;
     top: 0px;
     right: 0px;
@@ -71,17 +71,18 @@
     z-index: 9;
 }
 
-.neu-select-active .neu-select-options {
+.active .options {
     max-height: 180px;
     opacity: 1;
 }
 
-.neu-select-inactive .neu-select-value {
+.inactive .value {
     -webkit-animation: fadeIn .3s;
     animation: fadeIn .3s;
 }
 
-.neu-select-inactive .neu-select-options {
+.inactive .options {
+    overflow: hidden;
     background: #f4f5f7;
     max-height: 0px;
     opacity: 0;

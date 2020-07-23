@@ -1,6 +1,6 @@
 import React, {FunctionComponent, useContext} from 'react';
 import {useState} from 'react';
-import "./Select.css";
+import styles from "./Select.css";
 import {determineColor, Theme, ThemeContext} from "../Theme";
 
 export interface SelectProps {
@@ -31,31 +31,31 @@ const Select: FunctionComponent<SelectProps> = ({value, options = [], onChange, 
 
     return (
         <div
-            className={'neu-select' + (active ? ' neu-select-active' : ' neu-select-inactive') + (typeof value !== 'undefined' && value.length ? ' selected' : '')}
+            className={styles.root + ' ' + (active ? styles.active : styles.inactive) + (typeof value !== 'undefined' && value.length ? ' selected' : '')}
             style={{
                 color: calculatedColor,
                 boxShadow: "inset 0 0 15px rgba(80, 80, 80, 0), inset 0 0 20px rgba(255, 255, 255, 0), 7px 7px 15px " + shadowColor + ", -7px -7px 20px rgba(255, 255, 255, .7), inset 0px 0px 4px rgba(255, 255, 255, .2)"
             }}
         >
-            <div className=' neu-select-value' onClick={() => setActive(!active)}>
+            <div className={styles.value} onClick={() => setActive(!active)}>
                 <p>{value}</p>
             </div>
-            <div className='neu-select-options'>
+            <div className={styles.options + ' ' + (active ? styles.active : styles.inactive)}>
                 {options.map((option: any) => {
                     let type = option.constructor === String ? 'String' : option.constructor === Object ? 'Object' : false
                     option = type === 'String' ? {[option]: option} : option
                     return type ? <div
-                        className={'neu-select-option' + (value === option[Object.keys(option)[0]] ? ' select-option-active' : '')}
+                        className={styles.option + (value === option[Object.keys(option)[0]] ? ' ' + styles.active : '')}
                         onClick={handleClick} data-value={option[Object.keys(option)[0]]}
                         key={option[Object.keys(option)[0]]}>{Object.keys(option)[0]}</div> : ''
                 })}
             </div>
-            <svg viewBox="0 0 200 150" width="13" height="11">
+            <svg className={styles.svg} viewBox="0 0 200 150" width="13" height="11">
                 <path d="M92.672,144.373c-2.752,0-5.493-1.044-7.593-3.138L3.145,59.301c-4.194-4.199-4.194-10.992,0-15.18
                         c4.194-4.199,10.987-4.199,15.18,0l74.347,74.341l74.347-74.341c4.194-4.199,10.987-4.199,15.18,0
                         c4.194,4.194,4.194,10.981,0,15.18l-81.939,81.934C98.166,143.329,95.419,144.373,92.672,144.373z"/>
             </svg>
-            <div className='neu-select-trigger' onClick={() => setActive(!active)}>
+            <div className={styles.trigger} onClick={() => setActive(!active)}>
             </div>
         </div>
     );

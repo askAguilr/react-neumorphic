@@ -1,4 +1,4 @@
-.neu-input {
+.input {
     margin: 20px 10px !important;
     overflow: hidden;
     min-height: 35px;
@@ -8,7 +8,7 @@
     position: relative;
 }
 
-.neu-input input{
+.inputInternal{
     margin: 10px 0px 10px 15px !important;
     width:auto;
     all:unset;

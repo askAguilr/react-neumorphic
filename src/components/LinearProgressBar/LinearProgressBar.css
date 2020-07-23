@@ -1,4 +1,4 @@
-.neu-linear-progress-bar{
+.linearProgressBar{
     margin: 20px 10px !important;
     width:200px;
     margin: 10px;
@@ -10,7 +10,7 @@
 
 }
 
-.neu-linear-progress-bar-fill{
+.fill{
     background: #1890ff;
     margin: 0px;
     display:flex;

@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import {ThemeContext, Theme, determineColor} from '../Theme';
-import "./Button.css";
+import styles from "./Button.css";
 
 export interface ButtonProps {
     style?: any,
@@ -21,7 +21,7 @@ export default (props: ButtonProps) => {
     const color = determineColor([props.color, button.color], palette);
 
     return (
-        <button className="neu-button" onClick={onClick} style={
+        <button className={styles.button} onClick={onClick} style={
             {
                 // @ts-ignore
                 color: color,

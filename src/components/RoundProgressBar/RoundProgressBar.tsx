@@ -1,5 +1,5 @@
 import React, {FunctionComponent, useContext} from 'react';
-import './RoundProgressBar.css';
+import styles from './RoundProgressBar.css';
 import {determineColor, Theme, ThemeContext} from "../Theme";
 
 export interface RoundProgressBarProps {
@@ -25,7 +25,7 @@ const RoundProgressBar: FunctionComponent<RoundProgressBarProps> = ({size = 140,
     const dashOffset = dashArray - dashArray * value / max;
 
     return (
-        <div className="neu-roundprogressbar" style={{
+        <div className={styles.root} style={{
             boxShadow: "inset 0 0 7px rgba(255, 255, 255, 0.3), inset 5px 5px 5px rgba(0, 0, 0, 0.1), 3px 3px 7px " + shadowColor + " , -3px -3px 10px rgba(255, 255, 255, 0.95), inset -5px -5px 5px rgba(255, 255, 255, 0.3)",
         }}>
             <svg

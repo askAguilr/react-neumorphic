@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import "./Input.css";
+import styles from "./Input.css";
 import {determineColor, Theme, ThemeContext} from "../Theme";
 
 export interface InputProps {
@@ -28,9 +28,9 @@ function Input(props: InputProps) {
 
 
     return (
-        <div className="neu-input"
+        <div className={styles.input}
              style={{boxShadow: "inset 5px 5px 5px " + shadowColor + ",  inset -5px -5px 5px rgba(255, 255, 255, 0.3)"}}>
-            <input {...props} style={{
+            <input {...props} className={styles.inputInternal} style={{
                 //@ts-ignore
                 ...style, color: color
             }
